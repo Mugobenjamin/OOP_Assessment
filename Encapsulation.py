@@ -6,14 +6,14 @@ class BankAccount:
     def deposit(self, amount):
         if amount > 0:
             self.__balance += amount
-            print(f"${amount} deposited. New balance: ${self.__balance}")
+            print(f"Ksh {amount} deposited. New balance: Ksh {self.__balance}")
         else:
             print("Deposit amount must be positive.")
 
     def withdraw(self, amount):
         if 0 < amount <= self.__balance:
             self.__balance -= amount
-            print(f"${amount} withdrawn. New balance: ${self.__balance}")
+            print(f"Ksh {amount} withdrawn. New balance: Ksh {self.__balance}")
         else:
             print("Insufficient funds or invalid amount.")
 
@@ -29,4 +29,4 @@ account.withdraw(30)
 
 account.withdraw(200)
 
-print(f"Final balance: ${account.get_balance()}")
+print(f"Final balance: Ksh {account.get_balance()}")
